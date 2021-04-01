@@ -5,26 +5,6 @@ import os
 import random
 import time
 import sys
-#selenium libraries
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-#from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.support.ui import Select
-from selenium.common.exceptions import NoSuchElementException   
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-from selenium.common.exceptions import TimeoutException
-from selenium.common.exceptions import UnexpectedAlertPresentException
-from selenium.webdriver.chrome.options import Options
-
-
-#recaptcha libraries
-import speech_recognition as sr
-import ffmpy
-import requests
-import urllib
-import pydub
 
 #Networking Libraries
 from spoofmac.util import random_mac_address, MAC_ADDRESS_R, normalize_mac_address
@@ -66,7 +46,9 @@ def get_default_network_details():
                 print("[INFO] Gateway: ", netifaces.gateways()['default'][netifaces.AF_INET][0])
                 delay(5,5)
                 return ip_address,netifaces.ifaddresses(i)[netifaces.AF_INET][0]['netmask'],netifaces.gateways()['default'][netifaces.AF_INET][0]
-        except:pass
+        except:
+            print("no element found")
+            pass
 
 def changing_ip():
     #SETTINGS
