@@ -45,7 +45,7 @@ def get_default_network_details():
                 print("[INFO] Mask: ", netifaces.ifaddresses(i)[netifaces.AF_INET][0]['netmask'])
                 print("[INFO] Gateway: ", netifaces.gateways()['default'][netifaces.AF_INET][0])
                 delay(5,5)
-                return ip_address,netifaces.ifaddresses(i)[netifaces.AF_INET][0]['netmask'],netifaces.gateways()['default'][netifaces.AF_INET][0]
+                return ip_address, netifaces.ifaddresses(i)[netifaces.AF_INET][0]['netmask'], netifaces.gateways()['default'][netifaces.AF_INET][0]
         except:
             print("no element found")
             pass
@@ -53,7 +53,7 @@ def get_default_network_details():
 def changing_ip():
     #SETTINGS
     #Please check your network details 
-    interface_name = "WLAN" #netsh interface ipv4 show config
+    interface_name = "Intel(R) Wireless-N 7260" #netsh interface ipv4 show config
     ip_address,mask,gateway = get_default_network_details()
     try:
         print("[INFO] *Changing MAC & IP*")
