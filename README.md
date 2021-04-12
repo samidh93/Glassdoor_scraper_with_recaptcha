@@ -19,7 +19,7 @@ python install.py
 
 see the demo of current state below
 ![demonstration current state](demo.gif)
-![recaptcha solver](https://drive.google.com/file/d/16Z0dYWyP3KWJGuRIdSHUOGWzUrN9iJJO/view?usp=sharing)
+[recaptcha solver](https://drive.google.com/file/d/16Z0dYWyP3KWJGuRIdSHUOGWzUrN9iJJO/view?usp=sharing)
 
 ## Running jupyter notebook
 ~~~jupyter
